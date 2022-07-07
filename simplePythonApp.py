@@ -8,4 +8,5 @@ def getWeather(city):
     response = requests.get(url)
     data = response.json()
     return data["main"]["temp"]
-print(getWeather("London"))
+city = input("Enter city: ")
+print("The temperature in " + city + " is " + str(getWeather(city)))
